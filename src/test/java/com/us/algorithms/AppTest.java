@@ -1,4 +1,4 @@
-package com.yevgen.study;
+package com.us.algorithms;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

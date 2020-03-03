@@ -1,0 +1,137 @@
+#################task 1 ##############################
+An integer X and a non-empty zero-indexed array A consisting of N integers are given. 
+We are interested in which elements of A are equal to X and which are different from X. 
+The goal is to split array A into two parts, such that the number of elements equal to X in the first part is the same 
+as the number of elements different from X in the other part. More formally, we are looking for a number K such that:
+0 = K = N, and the number of elements equal to X in A[0..K-1] is the same as the number of elements different from X in A[K..N-1]. 
+(For K = 0, A[0..K-1] does not contain any elements. For K = N, A[K..N-1] does not contain any elements.)
+
+For example, given integer X = 5 and array A such that:
+  A[0] = 5
+  A[1] = 5
+  A[2] = 1
+  A[3] = 7
+  A[4] = 2
+  A[5] = 3
+  A[6] = 5
+Example of array above {5,5,1,7,2,3,5}
+  
+  K equals 4, because:
+1)two of the elements of A[0..3] are equal to X, namely A[0] = A[1] = X, and
+2)two of the elements of A[4..6] are different from X, namely A[4] and A[5].
+
+Write a function:
+int solution(int X, int A[], int N);
+that, given an integer X and a non-empty zero-indexed array A consisting of N integers, returns the value of number K satisfying the above conditions. It can be shown such index K always exists and it is unique.
+For example, given integer X and array A as above, the function should return 4, as explained above.
+
+Assume that:
+N is an integer within the range 100,000;
+X is an integer within the range ..100,000;
+each element of array A is an integer within the range 0..100,000.
+
+Complexity:
+1) expected worst-case time complexity is O(N);
+2) expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input arguments).
+
+Elements of input arrays can be modified.
+
+#################task 2 ##############################
+In base -2, integers are represented by sequences of bits in the following way.
+Bits are ordered from the least to the most significant. 
+Sequence B of N bits represents the number: sum { B[i]*(-2)i for  i = 0..N-1 }. 
+The empty sequence represents 0.
+Note that such a representation is suitable for both positive and negative integers.
+Write a function:
+class Solution { public int[] solution(int[] A); }
+that, given a zero-indexed array A of M bits, containing a sequence representing some integer X, returns the shortest sequence of bits representing -X.
+The sequence should be returned as:
+a structure Results (in C), or
+a vector of integers (in C++), or
+a record Results (in Pascal), or
+an array of integers (in any other programming language).
+
+For example, given A = [1,0,0,1,1] (X = 9), the function should return [1,1,0,1] (-X = -9). 
+Given A = [1,0,0,1,1,1] (X = -23), the function should return [1,1,0,1,0,1,1] (-X = 23).
+Assume that:
+M is an integer within the range [0..100,000];
+each element of array A is an integer that can have one of the following values: 0, 1.
+
+Complexity:
+1) expected worst-case time complexity is O(M);
+2) expected worst-case space complexity is O(M), beyond input storage (not counting the storage required for input arguments).
+
+Elements of input arrays can be modified.
+
+
+#################task 3 ##############################
+The knight is the piece in the game of chess that, in one turn, can move two squares horizontally and one square vertically or two squares vertically and one square horizontally.
+An infinite chessboard is given. All of its squares are empty except for the square with coordinates (0, 0), where a knight stands.
+Write a function:
+class Solution { public int solution(int A, int B); }
+that, given two numbers A and B, returns the minimum number of turns required for the knight to move from square (0, 0) to square (A, B). The function should return -1 if the knight cannot reach the given square. 
+The function should return -2 if the required number of turns exceeds 100,000,000.
+For example, given A = 4 and B = 5 the function should return 3, because the knight requires three turns to move from square (0, 0) to square (4, 5): in the first turn the knight moves from square (0, 0) to square (2, 1);
+in the second turn the knight moves from square (2, 1) to square (3, 3);
+in the third turn the knight moves from square (3, 3) to square (4, 5).
+
+Assume that:
+A and B are integers within the range [-100,000,000..100,000,000].
+
+Complexity:
+1) expected worst-case time complexity is O(1);
+2) expected worst-case space complexity is O(1).
+
+##################Amex-task ############################
+
+		/*****************************************************************************
+		 * Complete this class to validate credit card number using 
+		 * this Algorithm to validate check digits:
+		 * 1 - Beginning at the rightmost digit, moving right to left, sum the digits.
+		 * 2 - For every 2nd digit(from right), double value first, then sum
+		 * the value of each digit in the doubled number.e.g 6 -> 12, add 1 + 2
+		 * 3 - Sum for all digits
+		 * 4 - Take Sum modulo 10, if equal 0, then return true, else false.
+		 * Ex. "6314", Right->Left digits: 4, (2*1), 3, (2*6), so
+		 * Sum = (4) + (0+2) + (3) + (1+2) = 12, MOD10(12) = 2, so false
+		 ***************************************************************************** 
+		 */
+		public class CreditCardCheckDigits {
+
+		    public static boolean checkDigits(String card) {
+		        
+		      longint card = LongInteger.parse(card);
+		      for(int i=0; i<card.length; i++){
+		      
+		      	if (card[i]%2=0){
+		        
+		         		card[i]=card[i]*2;
+		          	if(card[i]>9){
+		            
+		            }
+		        }
+		      
+		      }
+		        
+		    }
+
+		    public static void lookup(String s) {
+		        System.out.println("Card Number " + s + " validation is "
+		                + checkDigits(s));
+		    }
+
+		    public static void main(String[] args) {
+		        lookup("6314");
+		        lookup("33344555588907");
+		        lookup("49927398716");
+		        lookup("8888888555888888");
+
+		    }
+
+		}
+		// Sample output
+		// Card Number 6314 validation is false
+		// Card Number 33344555588907 validation is true
+		// Card Number 49927398716 validation is true
+		// Card Number 8888888555888888 validation is false
+
