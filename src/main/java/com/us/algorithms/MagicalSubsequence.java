@@ -1,8 +1,5 @@
 package com.us.algorithms;
 
-import java.awt.List;
-import java.util.ArrayList;
-
 public class MagicalSubsequence {
 	
 	

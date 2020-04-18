@@ -1,4 +1,4 @@
-package com.us.algorithms;
+package com.us.java_features;
 
 
 import java.io.*;
@@ -53,7 +53,7 @@ public class ImmutableObjects {
 	  
 	  public static class AthleteRepo {
 	    public ArrayList<String> printAll(List<Athlete> all) {
-	    	ArrayList<String> allNames = new ArrayList<>();
+	    	ArrayList<String> allNames = new ArrayList<String>();
 	       
 	    	if (all == null)
 	          throw new NullPointerException();

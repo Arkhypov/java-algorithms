@@ -1,6 +1,6 @@
 package com.us.api;
 
-import static org.junit.*;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 
 
-import org.junit.Test;
+
 
 import javafx.css.ParsedValue;
 

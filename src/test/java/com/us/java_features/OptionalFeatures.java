@@ -3,7 +3,6 @@ package com.us.java_features;
 import java.util.Optional;
 
 import org.junit.Test;
-import org.testng.Assert;
 
 class Modem {
     private Double price;

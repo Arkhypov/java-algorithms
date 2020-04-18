@@ -1,6 +1,4 @@
-package com.us.algorithms;
-
-import java.util.Scanner;
+package com.us.algorithms.google;
 
 public class EncodeString {
 

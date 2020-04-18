@@ -3,7 +3,7 @@ package com.us.algorithms;
 
 import java.util.Scanner;
 
-public class GetAreaFactory {
+public class AreaFactory {
 	
 	
 	public static void main(String[] args) {

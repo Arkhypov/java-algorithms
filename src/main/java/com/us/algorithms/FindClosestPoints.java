@@ -8,8 +8,7 @@ import java.util.TreeMap;
 public class FindClosestPoints {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		digitsManipulations(1234);
+		findClosestPoints(3,new ArrayList<Point>(){{add(new Point(1,1));add(new Point(6,2));add(new Point(2,3));add(new Point(4,10));add(new Point(5,5));}};
 	}
 	//Write the method findClosestPoints(n, points) to print the top N closest points to the origin (0,0)
 
@@ -39,11 +38,11 @@ public class FindClosestPoints {
 	    }
 	}
 
-	/*public void findClosestPoints(int n, List<Point> points){
+	public static void findClosestPoints(int n, List<Point> points){
 	    
 	    //int minValue=Integer.MIN_VALUE;
 	    Map<Double,List<Point>> pointsMap = new TreeMap<Double,List<Point>>();
-	    points.stream().forEach(p->{
+	    for(Point p: points){
 	    	double delta=Math.sqrt((p.x-0)^2+(p.y-0)^2);
 	    	if(pointsMap.containsKey(delta)){
 	            List<Point> pointss=pointsMap.get(delta);
@@ -52,7 +51,8 @@ public class FindClosestPoints {
 	            continue;
 	    	}
 	    	pointsMap.put(delta, new ArrayList<Point>(){{add(p);}});
-	    });
+	    	
+	    }
 	    
 	    while(n>0){
 	        double key=pointsMap.keySet().iterator().next(); //first key in map;
@@ -63,24 +63,7 @@ public class FindClosestPoints {
 	        }
 	        pointsMap.remove(key);
 	    }
-	}*/
-	
-	static int digitsManipulations(int n) {
-		int sum=0;
-		int multiply=0;
-	    List<Integer> list= new ArrayList<Integer>();
-	    while (n>=10){
-	        int tmp =n%10;
-	        System.out.println(tmp);
-	        list.add(tmp);
-	        n=Math.abs(n/10);
-	        System.out.println(n);
-	    }
-	    list.add(n);
-	    for(int k : list){
-	      sum+=k;
-		  multiply=multiply*k;
-	    }
-		return multiply-sum;
 	}
+	
+	
 }

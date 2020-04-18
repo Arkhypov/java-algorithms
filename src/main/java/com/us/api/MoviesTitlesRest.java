@@ -1,4 +1,4 @@
-package com.us.algorithms;
+package com.us.api;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
