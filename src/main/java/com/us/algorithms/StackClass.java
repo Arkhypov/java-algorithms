@@ -17,16 +17,16 @@ import java.util.List;
 
 public class StackClass implements Stack {
 	    
-	    List<Object> arrList;
-	    Object maxItem;
-	    List<Object> history_of_maxes = new ArrayList<Object>();
+	    List<Integer> arrList;
+	    int maxItem;
+	    List<Integer> history_of_maxes = new ArrayList<Integer>();
 	    
 	   public StackClass(){
-	        arrList = new ArrayList<Object>();
+	        arrList = new ArrayList<Integer>();
 	    }
 	    
 	    @Override
-		public void push(Object item){
+		public void push(Integer item){
 	    	if(maxItem<item){
 	    		history_of_maxes.add(item);
 	    		maxItem=item;
@@ -35,11 +35,11 @@ public class StackClass implements Stack {
 	    }
 	    
 	    @Override
-	    public Object pop(){
+	    public Integer pop(){
 	        if(arrList.isEmpty()){
-	            return new RuntimeException("Stack is empty");
+	            return -1;
 	        }
-	        Object item = arrList.get(arrList.size()-1);
+	        Integer item = arrList.get(arrList.size()-1);
 	        if(history_of_maxes.get(history_of_maxes.size()-1)==arrList.get(arrList.size()-1)){
 	    		history_of_maxes.remove(history_of_maxes.size()-1);
 	    	}
@@ -61,9 +61,9 @@ public class StackClass implements Stack {
 	    
 	    
 	    @Override
-	    public Object max(){
+	    public Integer max(){
 	        if(arrList.isEmpty()){
-	            return new RunTimeException("Stack is empty");
+	            return -1;
 	        }
 	        /*
 	        else if(arrList.size()==1){
@@ -88,12 +88,12 @@ public class StackClass implements Stack {
 
 	}
 }
-	public interface Stack {
+ interface Stack {
 
     /**
      * Adds the given item to the top of the stack.
      */
-    void push(Object item);
+    void push(Integer item);
 
     /**
      * Removes the top item from the stack and returns it.
@@ -113,6 +113,6 @@ public class StackClass implements Stack {
     /**
      * Returns the max item .
      */
-    Object max();
+    Integer max();
 }
 

@@ -5,7 +5,7 @@ public class FoodFactory {
     
 	public static void main(String[] args) {
 		
-		FoodFactory myFoods = new FoodFactory(); 
+		FoodFactoryy myFoods = new FoodFactoryy(); 
 		Food food1 = myFoods.getFood("FastFood"); 
 		Food food2 = myFoods.getFood("Fruit"); 
 		System.out.println("My name is: " + food1.getClass().getSimpleName()); 
@@ -30,7 +30,7 @@ class FastFood extends Food {
 class Fruit extends Food {
 };
 
-class FoodFactory {
+class FoodFactoryy {
     public static Food getFood(String type){
         switch(type){
             case "FastFood" : return new FastFood();

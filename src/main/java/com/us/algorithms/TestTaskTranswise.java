@@ -25,16 +25,7 @@ public class TestTaskTranswise {
 			} else if((int)Math.floor(i/100)==digit || i%10==digit){
 				result=result.isEmpty() ? String.valueOf(i) : result+" "+i;
 				
-			}StringUtils.equals(cs1, cs2)
-			
-			
-			/*System.out.println("i= "+i);
-			System.out.println(Math.floor(i/10));
-			System.out.println(i%10);
-			System.out.println(i%100);*/
-			/*if(i%10==digit || i%100==3){
-				
-			}*/
+			}
 			i++;
 		}
 		

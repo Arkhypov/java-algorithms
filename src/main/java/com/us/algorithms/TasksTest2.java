@@ -16,7 +16,6 @@ public class TasksTest2 {
 	
 	public static void main(String[] args) {
 		//outPutCharOcur("Hello");
-		maxSubArraySum(new int[]{-2, -3, 4, -1, -4, 1, 5, -3});
 		System.out.println(reverseString("Hello World"));
 		System.out.println(findFirst("rerverse"));
         
@@ -136,37 +135,7 @@ public class TasksTest2 {
 		
 	}
 	
-	//in: {-2, -3, 4, -1, -2, 1, 5, -3}
-	//out: 7, start: 3; end 6
-	static void maxSubArraySum(int a[]){
-		
-		int max_sum = Integer.MIN_VALUE;
-		int max_we_have_so_far = 0, start=0, end=0, s=0;
-		int size=a.length;
-		
-		for (int i=0; i<size; i++){
-			
-			max_we_have_so_far+=a[i];
-			
-			if(max_sum<max_we_have_so_far){
-				max_sum=max_we_have_so_far;
-				start=s;
-				end=i;
-			}
-			
-			if(max_we_have_so_far<0){
-				
-				max_we_have_so_far=0;
-				s=i+1;
-			}
-			
-		}
-		System.out.println("Maximum sum of subarray: " + max_sum);
-		System.out.println("Starting index: " + start);
-		System.out.println("Ending index :" + end);
-		
-		
-    }
+	
 	
 static int reductionArray(int[] num) {
 		   
@@ -197,70 +166,7 @@ static int reductionArray(int[] num) {
 			return cost;
 	*/
 
-}
-
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
-/*
-
-int[] input = {1,5,6,6,9};
-int sum = 20;
-
-int closestPairToSum = {6,9};
-
-*/
-/*
-1.  
-2. do binary search
-
-1. loop all elements 
-and put result in hashmap
-*/
-/*public class Solution {
-    public static void main(String args[] ) throws Exception {
-         Enter your code here. Read input from STDIN. Print output to STDOUT 
-        System.out.println(Arrays.toString(getClosestKeyPair(new int[] {1,5,6,6,9}, 20)));
-    }
-    
-    public static int[] getClosestKeyPair(int[] input, int sum){
-        int result[]= new int[2];
-        Set<Integer> set = new HashSet();
-        int diff=Integer.MIN_VALUE;
-        for(int i=0; i< input.length; i++){
-            if(set.contains(input[i])){continue;}
-            set.add(input[i]);
-            for(int j=i; j< input.length;j++){
-                //if(set.contains(input[j])){continue;}
-                //set.add(input[j]);
-                if(20-(input[i]+input[j])<=sum){
-                    diff=20-(input[i]+input[j]);
-                    result=new int[]{input[i],input[j]};
-                }
-            }
-        }
-        return result;
-    }
-   
-}*/
-	
-	/* Problem Name is &&& Is Power of 10 &&& PLEASE DO NOT REMOVE THIS LINE. */
-	/**
-	 * Instructions to candidate.
-	 *  1) Run this code in the REPL to observe its behaviour. The
-	 *     execution entry point is main().
-	 *  2) Consider adding some additional tests in doTestsPass().
-	 *  3) Implement isPowerOf10() correctly.
-	 *  4) If time permits, some possible follow-ups.
-	 */
-
-
-	
-
+	}
 }
 
 

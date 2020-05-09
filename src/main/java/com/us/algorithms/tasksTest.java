@@ -94,7 +94,6 @@ public class tasksTest {
 		ArrayList result = new ArrayList<String>();
 		String[] inputList = input.split(",");
 		Map<String, Integer> items = new HashMap<String, Integer>(); 
-		items.get(key)
 		for (int i = 0; i<inputList.length; i++){
 			if (!items.containsKey(inputList[i])){
 			items.put(inputList[i], 1);
@@ -948,7 +947,7 @@ static int countDuplicatesss(int[] numbers) {
 
                 System.out.print("Enter IP : ");
                 String input = br.readLine();
-               input.length()
+               input.length();
                 if ("q".equals(input)) {
                     System.out.println("Exit!");
                     System.exit(0);
