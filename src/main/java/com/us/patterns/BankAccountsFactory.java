@@ -1,4 +1,4 @@
-package com.us.algorithms;
+package com.us.patterns;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;

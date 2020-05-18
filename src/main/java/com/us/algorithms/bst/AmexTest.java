@@ -1,4 +1,4 @@
-package com.us.algorithms;
+package com.us.algorithms.bst;
 
 import java.util.HashMap;
 import java.util.Hashtable;

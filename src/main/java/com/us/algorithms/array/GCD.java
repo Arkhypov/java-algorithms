@@ -1,4 +1,4 @@
-package com.us.algorithms;
+package com.us.algorithms.array;
 
 //greater common divider
 public class GCD {

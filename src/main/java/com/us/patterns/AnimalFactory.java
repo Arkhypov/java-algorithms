@@ -1,4 +1,4 @@
-package com.us.algorithms;
+package com.us.patterns;
 
 public class AnimalFactory {
 
