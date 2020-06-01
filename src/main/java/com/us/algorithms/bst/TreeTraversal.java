@@ -25,7 +25,7 @@ public class TreeTraversal {
 
 	}
 
-	class BinaryTree {
+/*	class BinaryTreee {
 	  static class TreeNode {
 	    String data;
 	    TreeNode left, right;
@@ -40,9 +40,9 @@ public class TreeTraversal {
 	  // root of binary tree
 	  TreeNode root;
 
-	  /**
+	  *//**
 	   * traverse the binary tree on InOrder traversal algorithm
-	   */
+	   *//*
 	  public void inOrder(TreeNode root) {
 		  if (root == null) {
 		      return;
@@ -53,9 +53,9 @@ public class TreeTraversal {
 		    inOrder(root.right);
 	  }
 	  
-	  /**
+	  *//**
 	   * traverse the binary tree on preOrder traversal algorithm
-	   */
+	   *//*
 	  public void preOrder(TreeNode root) {
 		  if (root == null) {
 		      return;
@@ -66,27 +66,25 @@ public class TreeTraversal {
 		    inOrder(root.right);
 	  }
 	  
-	  /**
+	  *//**
 	   * traverse the binary tree on preOrder traversal algorithm
-	   */
+	   *//*
 	  public void postOrder(TreeNode root) {
 		  if (root == null) {
 		      return;
 		    }
-		  
-		  	
 		    inOrder(root.left);
 		    inOrder(root.right);
 		    System.out.printf("%s ", root.data);
 	  }
 
-	  /**
+	  *//**
 	   * Java method to create binary tree with test data
 	   * 
 	   * @return a sample binary tree for testing
-	   */
-	  public static BinaryTree create() {
-	    BinaryTree tree = new BinaryTree();
+	   *//*
+	  public static BinaryTreee create() {
+	    BinaryTree tree = new BinaryTreee();
 	    TreeNode root = new TreeNode("40");
 	    tree.root = root;
 	    tree.root.left = new TreeNode("20");
@@ -102,4 +100,4 @@ public class TreeTraversal {
 	    return tree;
 	  }
 
-	}
+	}*/

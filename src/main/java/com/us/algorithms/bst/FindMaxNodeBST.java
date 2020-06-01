@@ -2,7 +2,7 @@ package com.us.algorithms.bst;
 
 import java.util.ArrayList;
 
-import com.us.algorithms.bst.BinaryTree.TreeNode;
+import com.us.algorithms.bst.BinarySearchTree.TreeNode;
 
 public class FindMaxNodeBST {
 
@@ -87,7 +87,7 @@ class BinaryTree {
 	   * @return a sample binary tree for testing
 	   */
 	  public static BinaryTree create() {
-	    BinaryTree tree = new BinaryTree();
+		  BinaryTree tree = new BinaryTree();
 	    TreeNode root = new TreeNode(40);
 	    tree.root = root;
 	    tree.root.left = new TreeNode(20);

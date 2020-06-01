@@ -1,4 +1,4 @@
-package com.us.algorithms;
+package com.us.algorithms.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class AnagramGroups {
+public class GroupAnagrams {
 
 	public static void main(String[] args) 
     { 
