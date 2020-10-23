@@ -34,8 +34,7 @@ public class MaxSubArray {
 			System.out.println("Maximum sum of subarray: " + max_sum);
 			System.out.println("Starting index: " + start);
 			System.out.println("Ending index :" + end);
-			
-			
+
 	    }
 
 }

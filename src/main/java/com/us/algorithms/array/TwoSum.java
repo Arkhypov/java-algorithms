@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class TwoSum {
 
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(twoSum(new int[]{3,2,4},6));

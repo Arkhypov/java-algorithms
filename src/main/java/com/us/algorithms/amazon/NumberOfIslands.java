@@ -31,6 +31,7 @@ public class NumberOfIslands {
 		int n = grid[0].length;
 		int count =0;
 		
+		//double loop matrix until you would meet 1
 		for(int i=0;i<m;i++){
 			for(int j=0;j<n;j++){
 				if(grid[i][j]=='1'){
@@ -44,6 +45,7 @@ public class NumberOfIslands {
 		return count;
 	}
 	
+	//go around this dot up, down, left, right, by marking it recursively
 	public static void merge(char[][]grid, int i, int j){
 		
 		int m= grid.length;
@@ -52,7 +54,7 @@ public class NumberOfIslands {
 		if(i<0||i>=m||j<0||j>=n||grid[i][j]!='1')
 	        return;
 		
-		grid[i][j]='0';
+		grid[i][j]='X';
 		
 		merge(grid, i-1, j);
 	    merge(grid, i+1, j);

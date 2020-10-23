@@ -22,9 +22,8 @@ public class EncodeString {
 				 count++; 
 				 j++;
 				 continue;
-			 }else{
-				 break;
 			 }
+			 break;
 		 }
 		 i+=count;
 		 if(count>3){

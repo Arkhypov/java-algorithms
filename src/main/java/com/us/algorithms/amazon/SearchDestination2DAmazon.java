@@ -1,7 +1,5 @@
 package com.us.algorithms.amazon;
 
-import java.util.List;
-
 public class SearchDestination2DAmazon {
 
 /*	Amazon Fresh is a grocery delivery services that offers consumers the option of purchasing their groceries online and having them delivered on schedule.  
