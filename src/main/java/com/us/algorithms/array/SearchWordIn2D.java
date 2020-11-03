@@ -2,56 +2,36 @@ package com.us.algorithms.array;
 
 public class SearchWordIn2D {
 
-	public static void searchGrid(char[][] grid, String word) {
-
-        for (int i = 0; i < grid.length; ++i) {
-            for (int j = 0; j < grid[0].length; ++j) {
-                if (grid[i][j] == word.charAt(0)) {
-                    for (int dir = 0; dir < 4; dir++) {
-                        if (searchGridUtil(grid, word, 1, dir, i, j, i, j)) break;
-                    }
-                }
-            }
-        }
-    }
-
-
-    private static boolean searchGridUtil(char[][] grid, String word, int pos, int dir, int i, int j, int iPos, int jPos) {
-        if (pos == word.length()) {
-            System.out.printf("pattern found at %d, %d\n", iPos, jPos);
-            return true;
-        }
-        int m = grid.length, n = grid[0].length;
-        int x, y;
-        if (dir == 0) {
-            x = i - 1;
-            y = j - 1;
-        } else if (dir == 1) {
-            x = i - 1;
-            y = j;
-        } else if (dir == 2) {
-            x = i - 1;
-            y = j + 1;
-        } else if (dir == 3) {
-            x = i;
-            y = j + 1;
-        } else if (dir == 4) {
-            x = i + 1;
-            y = j + 1;
-        } else if (dir == 5) {
-            x = i + 1;
-            y = j;
-        } else if (dir == 6) {
-            x = i + 1;
-            y = j - 1;
-        } else {
-            x = i;
-            y = j - 1;
-        }
-
-        if (x < 0 || x == m || y < 0 || y == n || grid[x][y] != word.charAt(pos)) return false;
-        return searchGridUtil(grid, word, pos + 1, dir, x, y, iPos, jPos);
-    }
+/*
+ * Given a 2D board and a word, find if the word exists in the grid.
+   The word can be constructed from letters of sequentially adjacent cells, 
+   where "adjacent" cells are horizontally or vertically neighboring. 
+   The same letter cell may not be used more than once.
+   
+   Solutions: DFS
+ * 	
+ */
+	
+	public static boolean exist(char[][] board, String word) {
+	    for(int i = 0; i < board.length; i++)
+	        for(int j = 0; j < board[0].length; j++){
+	            if(exist(board, i, j, word, 0))
+	                return true;
+	        }
+	    return false;
+	}
+	private static boolean exist(char[][] board, int i, int j, String word, int ind){
+	    if(ind == word.length()) return true;
+	    if(i > board.length-1 || i <0 || j<0 || j >board[0].length-1 || board[i][j]!=word.charAt(ind))
+	        return false;
+	    board[i][j]='*'; //marking asterisk, so does not walk same char 
+	    boolean result =    exist(board, i-1, j, word, ind+1) ||
+	                        exist(board, i, j-1, word, ind+1) ||
+	                        exist(board, i, j+1, word, ind+1) ||
+	                        exist(board, i+1, j, word, ind+1);
+	    board[i][j] = word.charAt(ind);
+	    return result;
+	}
 
     public static void main(String[] args) {
         char[][] grid = {
@@ -59,9 +39,9 @@ public class SearchWordIn2D {
                 new char[]{'G', 'E', 'E', 'K', 'S', 'Q', 'U', 'I', 'Z', 'G', 'E', 'E', 'K'},
                 new char[]{'I', 'D', 'E', 'Q', 'A', 'P', 'R', 'A', 'C', 'T', 'I', 'C', 'E'}
         		};
-        searchGrid(grid, "GEEKS");
+        System.out.println(exist(grid, "GEEKS"));
         System.out.println();
-        searchGrid(grid, "EEE");
+        System.out.println(exist(grid, "EEE"));
     }
 
 }
