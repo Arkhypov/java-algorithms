@@ -24,9 +24,10 @@ public class LongestPalidromeSubstring {
  Output: "a"
  * 
  */
-	private int lo, maxLen;
+private static int lo; //palindrome start index
+private static int maxLen; //palindrome length
 
-	public String longestPalindrome(String s) {
+	public static String longestPalindrome(String s) {
 		int len = s.length();
 		if (len < 2)
 			return s;
@@ -38,7 +39,7 @@ public class LongestPalidromeSubstring {
 	    return s.substring(lo, lo + maxLen);
 	}
 
-	private void extendPalindrome(String s, int j, int k) {
+	private static void extendPalindrome(String s, int j, int k) { //by using this algorithm we are looking of the middle of Palindrome
 		while (j >= 0 && k < s.length() && s.charAt(j) == s.charAt(k)) {
 			j--;
 			k++;
@@ -51,6 +52,6 @@ public class LongestPalidromeSubstring {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
+		System.out.println(longestPalindrome("cbbd"));
 	}
 }
