@@ -19,6 +19,7 @@ public class AmbiguoseChars {
 	"abc" "xxx"   (false)
 	*/
 	public static void main(String[] args) {
+		
 	        System.out.println("false: " + isAmbiguose("abca", "xxyz"));
 	        System.out.println("true:  " + isAmbiguose("aabc", "xxyz"));
 	        System.out.println("true:  " + isAmbiguose("abca", "xyzx"));
@@ -44,4 +45,5 @@ public class AmbiguoseChars {
 	        }
 	        return true;
 	    }
+	
 }
