@@ -22,8 +22,16 @@ public class LoadBalancer {
    */
   public static void main(String[] args) {
     // TODO Auto-generated method stub
-    System.out.println(get2sizedArray(new int[] {3, 5, 5, 7, 98, 99}));
-    System.out.println(get2sizedArray(new int[] {5, 3, 7, 5, 1}));
+    // System.out.println(get2sizedArray(new int[] {3, 5, 5, 7, 98, 99}));
+    // System.out.println(get2sizedArray(new int[] {5, 3, 7, 5, 1}));
+    System.out.println(calculateAmount(new ArrayList<Integer>() {
+      {
+        add(2);
+        add(5);
+        add(1);
+        add(4);
+      }
+    }));
   }
 
   public static List<ArrayList<Integer>> get2sizedArray(int[] arr) {
@@ -58,5 +66,16 @@ public class LoadBalancer {
       }
     };
   }
+  //
+  // public static long calculateAmount(List<Integer> prices) {
+  // // Write your code here
+  // int maxMin = Math.min(Integer.MAX_VALUE, prices.get(0));
+  // int sum = Math.max(0, prices.get(0));
+  // for (int i = 1; i < prices.size(); i++) {
+  // maxMin = prices.get(i) < 0 ? 0 : Math.min(maxMin, prices.get(i));
+  // sum += Math.max(prices.get(i) - maxMin, 0);
+  // }
+  // return sum;
+  // }
 
 }
