@@ -23,8 +23,15 @@ public class FindShortestPath {
   /*
    * Visual representation of the Train map used
    *
-   * King's Cross St Pancras --- Angel ---- Old Street | \ | | \ | | \ | Russell Square Farringdon
-   * --- Barbican --- Moorgate | / | / | / Holborn --- Chancery Lane --- St Paul's --- Bank
+   *  King's Cross St Pancras --- Angel ---- Old Street
+       |                   \                            |
+       |                    \                            |
+       |                     \                            |
+       Russell Square         Farringdon --- Barbican --- Moorgate
+       |                                                  /
+       |                                                 /
+       |                                                /
+       Holborn --- Chancery Lane --- St Paul's --- Bank
    */
 
   public static boolean doTestsPass() {
